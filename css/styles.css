@@ -19,7 +19,6 @@ body {
     background-color: #ffffff;
     font-family: 'Fira Sans', sans-serif;
     font-size: 1rem;
-    align-items: center;
 }
 
 ol, ul {
@@ -85,7 +84,6 @@ header {
 /* footer */
 footer {
     background-color: var(--lightgrey);
-    align-content: center;
 }
 
 .social-media {
@@ -93,9 +91,7 @@ footer {
     display: table;
     clear: both;
     padding: 24px;
-    text-align: center;
     color: var(--primary);
-
 }
 
 .list__social-media {
@@ -105,12 +101,11 @@ footer {
     margin: 8px;
 }
 
-svg {
-    vertical-align: middle; /* SVG zentrieren */
+.primary {
     color: var(--primary);
   }
 
-svg:hover {
+.primary:hover {
     color: var(--secondary);
 }
 
