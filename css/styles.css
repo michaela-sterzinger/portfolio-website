@@ -137,14 +137,6 @@ a {
     text-decoration: underline;
 }
 
-.link:visited { 
-    color: var(--tertiary);
-}
-
-.link:active {
-    color: var(--primary);
-}
-
 .link:focus {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
@@ -176,10 +168,37 @@ a {
     border-radius: 2px;
 }
 
+.button-secondary {
+    background-color: white;
+    color: var(--primary);
+    height: 40px;
+    font-size: 1em;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border-color: var(--primary);
+    border-width: 2px;
+    border-style: solid;
+    text-decoration: none;
+}
+
+.button-secondary:hover {
+    color: var(--secondary);
+    border-color: var(--secondary);
+
+}
+
+.button-secondary:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
 .nav {
     display: inline;
     color: var(--secondary);
-
+    border-color: var(--secondary);
 }
 
 .nav:hover {
