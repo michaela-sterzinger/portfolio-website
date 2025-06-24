@@ -1,5 +1,242 @@
-h1 {
-    font-size: 30px;
-    font-weight: 700;
-    color: blue;
+/* general */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+    background-color: #ffffff;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1rem;
+    align-items: center;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* typography */
+
+h1, h2, h3, h4 {
+  line-height: 1.4;
+}
+
+h1 {
+    font-size: 2.75em;
+    font-weight: 700;
+    color: hsl(172, 30%, 39%);
+}
+
+h2 {
+    font-size: 2.25em;
+    font-weight: 700;
+}
+  
+h3 {
+    font-size: 1.75em;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.35em;
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Karla';
+    line-height: 1.2;
+}
+
+/* header */
+
+header {
+    background-color: var(--lightgreen);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 8px;
+}
+
+/* footer */
+footer {
+    background-color: var(--lightgrey);
+    align-content: center;
+}
+
+.social-media {
+    content: "";
+    display: table;
+    clear: both;
+    padding: 24px;
+    text-align: center;
+    color: var(--primary);
+
+}
+
+.list__social-media {
+    float: left;
+    width: 32px;
+    display: inline;
+    margin: 8px;
+}
+
+svg {
+    vertical-align: middle; /* SVG zentrieren */
+    color: var(--primary);
+  }
+
+svg:hover {
+    color: var(--secondary);
+}
+
+/* colors */
+:root {
+--primary: hsl(172, 30%, 39%);
+--secondary: hsl(172, 30%, 24%);
+--lightgreen: hsl(172, 30%, 60%);
+--lightgrey: hsl(172, 0%, 95%);
+--tertiary: hsl(343, 11%, 49%);
+--tertiarylight: hsl(343, 11%, 60%);
+}
+
+/* general */
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+}
+.link {
+    color: var(--primary);
+}
+
+.link:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.link:visited { 
+    color: var(--tertiary);
+}
+
+.link:active {
+    color: var(--primary);
+}
+
+.link:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+    
+
+.button-primary {
+    background-color: var(--primary);
+    color: white;
+    height: 40px;
+    font-size: 1em;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: none;
+    text-decoration: none;
+}
+
+.button-primary:hover {
+    background-color: var(--secondary);
+    text-decoration: none;
+}
+
+.button-primary:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.nav {
+    display: inline;
+    color: var(--secondary);
+
+}
+
+.nav:hover {
+    text-decoration: underline;
+} 
+
+.nav {
+    display: inline;
+    color: var(--secondary);
+}
+
+/* Page template general */
+div {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+    margin-left: 4px;
+}
+
+.container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-top: 8px;
+    margin-bottom: 20px;
+} 
+
+.container {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+    margin-left: 4px;
+}
+
+/* Home template */
+.project-card {
+    content: "";
+    display: table;
+    clear: both;
+    padding: 24px;
+}
+
+.project-card__media-wrapper {
+    float: left;
+    width: 50%;
+}
+
+/* Page template about */
+
+/* Page template project site */
