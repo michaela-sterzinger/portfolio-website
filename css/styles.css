@@ -1,55 +1,21 @@
 /* general */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-
 body {
-	line-height: 1;
+    line-height: 1em;
     background-color: #ffffff;
     font-family: 'Fira Sans', sans-serif;
     font-size: 1rem;
 }
 
-ol, ul {
-	list-style: none;
-}
-
-blockquote, q {
-	quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
 /* typography */
 
 h1, h2, h3, h4 {
-  line-height: 1.4;
+    line-height: 1.4;
 }
 
 h1 {
     font-size: 2.75em;
     font-weight: 700;
-    color: hsl(172, 30%, 39%);
+    color: var(--primary);
 }
 
 h2 {
@@ -59,7 +25,7 @@ h2 {
   
 h3 {
     font-size: 1.75em;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 h4 {
@@ -69,44 +35,19 @@ h4 {
 
 p {
     font-family: 'Karla';
+    font-weight: 400;
     line-height: 1.2;
 }
 
 /* header */
-
 header {
     background-color: var(--lightgreen);
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 8px;
+    padding: 1em;
 }
 
 /* footer */
 footer {
     background-color: var(--lightgrey);
-}
-
-.social-media {
-    content: "";
-    display: table;
-    clear: both;
-    padding: 24px;
-    color: var(--primary);
-}
-
-.list__social-media {
-    float: left;
-    width: 32px;
-    display: inline;
-    margin: 8px;
-}
-
-.primary {
-    color: var(--primary);
-  }
-
-.primary:hover {
-    color: var(--secondary);
 }
 
 /* colors */
@@ -120,6 +61,11 @@ footer {
 }
 
 /* general */
+.logo {
+    height: 2em;
+    width: auto;
+}
+
 img {
     width: 100%;
 }
@@ -127,130 +73,60 @@ img {
 a {
     text-decoration: none;
     font-weight: 700;
-}
-.link {
     color: var(--primary);
 }
 
-.link:hover {
+a:hover {
     color: var(--secondary);
     text-decoration: underline;
 }
 
-.link:focus {
+a:focus {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
     border-radius: 2px;
 }
-    
 
-.button-primary {
+.button {
+    height: 40px;
+    font-size: 1em;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.button:hover {
+    text-decoration: none;
+}
+
+.button.primary {
     background-color: var(--primary);
     color: white;
-    height: 40px;
-    font-size: 1em;
-    padding: 10px 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    border: none;
-    text-decoration: none;
 }
 
-.button-primary:hover {
+.button.primary:hover {
     background-color: var(--secondary);
-    text-decoration: none;
 }
 
-.button-primary:focus {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
-    border-radius: 2px;
-}
-
-.button-secondary {
+.button.secondary {
     background-color: white;
     color: var(--primary);
-    height: 40px;
-    font-size: 1em;
-    padding: 10px 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 4px;
     border-color: var(--primary);
     border-width: 2px;
     border-style: solid;
-    text-decoration: none;
 }
 
-.button-secondary:hover {
+.button.secondary:hover {
     color: var(--secondary);
     border-color: var(--secondary);
-
-}
-
-.button-secondary:focus {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
-    border-radius: 2px;
-}
-
-.nav {
-    display: inline;
-    color: var(--secondary);
-    border-color: var(--secondary);
-}
-
-.nav:hover {
-    text-decoration: underline;
-} 
-
-.nav {
-    display: inline;
-    color: var(--secondary);
 }
 
 /* Page template general */
-div {
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 3px;
-    margin-left: 4px;
-}
-
-.container {
-    padding: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 p {
     font-size: 1em;
     line-height: 1.6;
     margin-top: 8px;
     margin-bottom: 20px;
 } 
-
-.container {
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 3px;
-    margin-left: 4px;
-}
-
-/* Home template */
-.project-card {
-    content: "";
-    display: table;
-    clear: both;
-    padding: 24px;
-}
-
-.project-card__media-wrapper {
-    float: left;
-    width: 50%;
-}
-
-/* Page template about */
-
-/* Page template project site */
