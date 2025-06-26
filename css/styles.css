@@ -45,9 +45,38 @@ header {
     padding: 1em;
 }
 
+.nav {
+    display: inline;
+    color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.nav:hover {
+    text-decoration: underline;
+} 
+
+.nav {
+    display: inline;
+    color: var(--secondary);
+}
+
 /* footer */
 footer {
     background-color: var(--lightgrey);
+}
+
+.social-media {
+    content: "";
+    display: table;
+    clear: both;
+    padding: 24px;
+    color: var(--primary);
+}
+.list__social-media {
+    float: left;
+    width: 32px;
+    display: inline;
+    margin: 0,5em;
 }
 
 /* colors */
@@ -130,3 +159,17 @@ p {
     margin-top: 8px;
     margin-bottom: 20px;
 } 
+
+/* Home template */
+.project-card {
+    content: "";
+    display: table;
+    clear: both;
+    padding: 24px;
+}
+
+.project-card__media-wrapper {
+    float: left;
+    width: 50%;
+}
+
