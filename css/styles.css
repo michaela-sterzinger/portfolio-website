@@ -11,7 +11,7 @@
 
 /* general */
 main {
-    padding-top: 4em;
+    padding-top: 85.59px;
   }
 
 html {
@@ -29,14 +29,17 @@ body {
 
 img {
     width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 a {
     color: var(--primary);
+    transition: 0.8s color, 1s text-decoration;   
 }
 
 a:visited {
-    color: var(--primary);    
+    color: var(--primary); 
 }
 
 a:hover {
@@ -60,6 +63,8 @@ a:active {
     border-radius: 4px;
     text-decoration: none;
     display: flex;
+    justify-content: center;
+    transition: 0.8s background-color;
 }
 
 .button:hover {
@@ -115,8 +120,9 @@ a:active {
     margin: auto;
 }
 
-.container:not(header .container) .about {
+.container:not(header .container) {
     gap: 2em;
+    max-width: 1200px;
 }
 
 section {
@@ -131,23 +137,23 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 4.4rem;
+    font-size: 4rem;
     font-weight: 700;
     color: var(--primary);
 }
 
 h2 {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
     font-weight: 700;
 }
   
 h3 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-weight: 600;
 }
 
 h4 {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     font-weight: 400;
 }
 
@@ -157,6 +163,7 @@ header {
     padding-block: 1em;
     position: fixed;
     width: 100%;
+    box-shadow: 0 -6px 8px 5px var(--black);
 }
     
 header .container {
@@ -232,34 +239,107 @@ footer .container {
 
 .list__social-media {
     width: 3.2rem;
-    font-size: 0.5rem;
     line-height: 0;
-    display: inline-block;
+    display: grid;
 }
 
 /* Home template */
 
-/* About */
-
-.about-inner {
-    padding-block: 2em;
+span {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
 }
 
+/* About */
+
+.about{
+    padding-block: 2rem;
+}
+
+/* animation bulb */
+@keyframes color-change {
+    0% {fill: #FDD305;}
+    50% {fill: #fcffad;}
+    100% {fill: #f76414;}
+    0% {stroke: #FDD305;}
+    50% {stroke: #fcffad;}
+    100% {stroke: #f76414;}
+}
+
+
+.bulb {
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+/* rotation wheel */
+
+@keyframes rotate-clockwise {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg)}
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg)}
+}
+
+.wheel-big {
+    animation-duration: 10s;
+    animation-name: rotate-clockwise;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.wheel-small {
+    animation-duration: 10s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
 
 /* tablet & desktop template */
 
 @media (min-width: 768px) {
+    h1 {
+        font-size: 4.4rem;
+        font-weight: 700;
+        color: var(--primary);
+    }
+    
+    h2 {
+        font-size: 3.6rem;
+        font-weight: 700;
+    }
+      
+    h3 {
+        font-size: 2.8rem;
+        font-weight: 600;
+    }
+    
+    h4 {
+        font-size: 2.1rem;
+        font-weight: 400;
+    }
+
     header .container {
         flex-direction: row;
         justify-content: space-between;
     }
-    
+
     .project-card {
         display: grid;
         grid-template-columns: 2fr 3fr;
-        gap: 2em;
+        gap: 2.6rem;
+        padding-block: 1.6rem;
     }
-
+   
     .project-card__media-wrapper {
         display: flex;
         align-items: center;
@@ -271,6 +351,65 @@ footer .container {
 
     .button {
         display: inline-block;
+    }
+
+    .about-inner {
+    padding-bottom: 2rem;
+    }
+
+    .skills-tools {
+        display: block;    
+    }
+
+    .skills-tools__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8rem;
+    }
+   
+    .skills-tools__list-wrapper {
+        display: block;
+        gap: 2rem; 
+    }
+
+
+}
+
+/* Laptops and bigger Screen */
+
+@media (min-width: 1024px) {
+    header .container .project {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    body {
+        font-size: 1.8rem;
+    }
+
+    .button {
+        font-size: 1.8rem;
+    }
+
+    .project-card {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        align-items: center;
+        padding-block: 2.4rem;
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 8rem;
+    }
+
+    .skills-tools__inner {
+        display: block;
+    }
+
+    .skills-tools__list-wrapper {
+        padding-block: 1.8rem;
     }
 
 }
