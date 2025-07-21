@@ -11,21 +11,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link href="img/logo/portfolio_favicon.png" rel="shortcut icon">
+    <script src="https://kit.fontawesome.com/dcdf535973.js" crossorigin="anonymous"></script>
     <title>Michaela Sterzinger | About</title>
 </head>
 <body id="about">
     <header>
         <div class="container">
-            <a href="index.html">
-            <img src="img/logo/logo.svg" alt="Michaela Sterzinger logo" class="logo">
-            </a>
-            <nav>
-                <ul>
-                  <li class="nav"><a href="index.html">Work</a></li>
-                  <li class="nav"><a href="about.html">About</a></li>
-                  <li class="nav"><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="navtoggle" id="mynavtoggle">
+                <a href="index.html">
+                <img src="img/logo/logo.svg" alt="Michaela Sterzinger logo" class="logo">
+                </a>
+                    <nav>
+                        <ul>
+                        <li class="nav"><a href="index.html">Work</a></li>
+                        <li class="nav"><a href="about.html">About</a></li>
+                        <li class="nav"><a href="#contact">Contact</a></li>
+                        <li class="nav"><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fa-solid fa-bars"></i></a></li>
+                        </ul>
+                    </nav>
+            </div>
         </div>
     </header>
     <main>
@@ -105,5 +109,10 @@
             <p>Copyright Michaela Sterzinger 2025</p>
         </div>
     </footer>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>  
+    <script src="js/scripts.js"></script>
 </body>
 </html>

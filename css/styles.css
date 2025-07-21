@@ -11,7 +11,7 @@
 
 /* general */
 main {
-    padding-top: 85.59px;
+    padding-top: 52px;
   }
 
 html {
@@ -168,27 +168,29 @@ header {
     padding-block: 1em;
     position: fixed;
     width: 100%;
+    height: auto;
     box-shadow: 0 -6px 8px 5px var(--black);
-}
-    
-header .container {
-    align-items: center;
-    gap: 0.5em;
 }
 
 header a:has(.logo) {
     line-height: 0;
+    display: grid;
+    max-width: 150px;
 }
 
 .logo {
     height: clamp(2rem, 1.6rem + 1.111vw, 3.2rem);
-    width: auto;
+    max-width: 150px;
+    text-align: center;
 }
 
 nav a {
     text-decoration: none;
     font-weight: 700;
     color: var(--black);
+    width: 3.2rem;
+    line-height: 0;
+    display: grid;
 }
 
 nav a:visited {
@@ -208,12 +210,60 @@ nav a:active {
 }
 
 nav ul {
-    display: flex;
+    display: flex; 
     list-style: none;
     padding-inline-start: 0;
     gap: 2em;
     margin: 0;
+    text-align: center;
 }
+
+.navtoggle li:not(:last-child) {
+    display: none;
+  }
+
+header .navtoggle, .navtoggle.responsive {
+    position: relative;
+}
+
+.navtoggle li .icon {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    font-size: 20px;
+    padding-right: 0;
+}
+
+.navtoggle.responsive nav {
+    padding-block: 1.5rem;
+}
+
+.navtoggle.responsive nav ul {
+    border-top: 1px solid var(--lightgrey);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
++}
+
+.navtoggle.responsive li {
+    display: block;
+    padding-block: 1.5em;
+    border-top: 1px solid var(--lightgrey);
+}
+
+.navtoggle.responsive li:last-child  {
+    border: 0;
+    padding: 0 0 10px;
+  }
+
+.navtoggle.responsive li:first-child  {
+    border-top: 0;    
+}
+
+.navtoggle.responsive .icon i::before {
+    content: "\f00d"; 
+  }
 
 /* footer */
 footer {
@@ -360,10 +410,44 @@ span {
         font-size: 2.1rem;
     }
 
+    main {
+        padding-top: 85.59px;
+      }    
+
     header .container {
+        display: flex;
+    }
+
+    .navtoggle {
         flex-direction: row;
         justify-content: space-between;
+        align-items: center; 
+        gap: 0.5em;
+        padding-inline: 1.5rem;
+        display: flex;
+        max-width: 1200px;
     }
+
+    .navtoggle li:not(:last-child) {
+        display: inline-block;
+     }
+    
+      .navtoggle li:last-child {
+        display: none;
+    }
+    
+    nav ul {
+        display: flex; 
+        list-style: none;
+        padding-inline-start: 0;
+        gap: 2em;
+        margin: 0;
+    }
+
+    .logo {
+    height: clamp(2rem, 1.6rem + 1.111vw, 3.2rem);
+    margin: auto;
+    } 
 
     .project-card {
         display: grid;
@@ -403,6 +487,14 @@ span {
         display: block;
         gap: 2rem; 
     }
+
+    nav ul {
+    display: flex;
+    }
+
+    nav ul li {
+        display: inline-block;
+      }
 
 
 }
