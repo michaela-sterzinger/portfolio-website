@@ -111,6 +111,44 @@ a:active {
     border-color: var(--secondary);
 }
 
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #fff;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 100%;
+    border: 1px solid var(--primary);
+    right: 15px;
+    bottom: 15px;
+    z-index: 11;
+  }
+  
+.back-to-top i {
+    padding-top: 15px;
+    color: var(--primary);
+}
+
+.back-to-top:visited {
+    color: var(--primary);
+    border-radius: 100%;
+}
+
+.back-to-top:hover {
+    color: var(--secondary);
+    border-color: var(--secondary);
+    border-radius: 100%;
+}
+
+.back-to-top:active {
+    color: var(--secondary);
+    border-color: var(--secondary);
+    border-radius: 100%;
+}
+
 .container {
     padding-inline: 1.5rem;
     display: flex;
@@ -185,12 +223,11 @@ header a:has(.logo) {
 }
 
 nav a {
+    padding-block: 0.8em;
     text-decoration: none;
     font-weight: 700;
     color: var(--black);
-    width: 3.2rem;
-    line-height: 0;
-    display: grid;
+    display: block;
 }
 
 nav a:visited {
@@ -213,7 +250,7 @@ nav ul {
     display: flex; 
     list-style: none;
     padding-inline-start: 0;
-    gap: 2em;
+    gap: 0;
     margin: 0;
     text-align: center;
 }
@@ -227,9 +264,10 @@ header .navtoggle, .navtoggle.responsive {
 }
 
 .navtoggle li .icon {
+    display: flex;
     position: absolute;
     right: 0;
-    top: 2px;
+    top: -15px;
     font-size: 20px;
     padding-right: 0;
 }
@@ -244,11 +282,10 @@ header .navtoggle, .navtoggle.responsive {
     align-items: center;
     justify-content: center;
     text-align: center;
-+}
+}
 
 .navtoggle.responsive li {
     display: block;
-    padding-block: 1.5em;
     border-top: 1px solid var(--lightgrey);
 }
 
@@ -513,6 +550,15 @@ span {
 
     .button {
         font-size: 1.8rem;
+    }
+
+    nav a {
+        text-decoration: none;
+        font-weight: 700;
+        color: var(--black);
+        width: 3.2rem;
+        line-height: 0;
+        display: grid;
     }
 
     .project-card {
