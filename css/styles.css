@@ -305,7 +305,7 @@ header .navtoggle, .navtoggle.responsive {
 /* footer */
 footer {
     background-color: var(--lightgrey);
-    padding-block: 5em 1em;
+    padding-block: 5em 3em;
 }
 
 footer .container .social-media {
