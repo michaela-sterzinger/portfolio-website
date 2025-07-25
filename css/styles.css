@@ -1,21 +1,22 @@
 /* colors */
 :root {
-    --primary: hsl(172, 30%, 39%);
-    --secondary: hsl(172, 30%, 24%);
+    --primary: hsl(172, 30%, 34%);
+    --secondary: hsl(172, 30%, 16%);
     --lightgreen: hsl(172, 30%, 60%);
     --lightgrey: hsl(172, 0%, 95%);
     --tertiary: hsl(343, 11%, 49%);
     --tertiarylight: hsl(343, 11%, 60%);
-    --black: hsl(172, 30%, 0%);
-    }
+    --black: hsl(0, 0%, 13%);
+}
 
 /* general */
 main {
     padding-top: 52px;
-  }
+}
 
 html {
     font-size: 62.5%;
+    color: var(--black);
     scroll-behavior: smooth;
 }
 
@@ -34,11 +35,11 @@ img {
 
 a {
     color: var(--primary);
-    transition: 0.8s color, 1s text-decoration;   
+    transition: 0.8s color, 1s text-decoration;
 }
 
 a:visited {
-    color: var(--primary); 
+    color: var(--primary);
 }
 
 a:hover {
@@ -53,7 +54,7 @@ a:focus {
 }
 
 a:active {
-    color: var(--secondary);    
+    color: var(--secondary);
 }
 
 .button {
@@ -76,7 +77,7 @@ a:active {
 }
 
 .button.primary:visited {
-    color: white;   
+    color: white;
 }
 
 .button.primary:hover {
@@ -125,8 +126,8 @@ a:active {
     right: 15px;
     bottom: 15px;
     z-index: 11;
-  }
-  
+}
+
 .back-to-top i {
     padding-top: 15px;
     color: var(--primary);
@@ -144,14 +145,14 @@ a:active {
 }
 
 .back-to-top:focus {
-outline: 2px solid var(--primary);
-outline-offset: 2px;
-border-radius: 100%;    
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 100%;
 }
 
 .back-to-top:active {
-    color: var(--secondary);
-    border-color: var(--secondary);
+    color: var(--primary);
+    border-color: var(--primary);
     border-radius: 100%;
 }
 
@@ -175,7 +176,10 @@ section {
 
 /* typography */
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     line-height: 1.1;
     margin-block: 0;
 }
@@ -190,7 +194,7 @@ h2 {
     font-size: 3.2rem;
     font-weight: 700;
 }
-  
+
 h3 {
     font-size: 2.4rem;
     font-weight: 600;
@@ -253,7 +257,7 @@ nav a:active {
 }
 
 nav ul {
-    display: flex; 
+    display: flex;
     list-style: none;
     padding-inline-start: 0;
     gap: 0;
@@ -263,9 +267,10 @@ nav ul {
 
 .navtoggle li:not(:last-child) {
     display: none;
-  }
+}
 
-header .navtoggle, .navtoggle.responsive {
+header .navtoggle,
+.navtoggle.responsive {
     position: relative;
 }
 
@@ -295,18 +300,18 @@ header .navtoggle, .navtoggle.responsive {
     border-top: 1px solid var(--lightgrey);
 }
 
-.navtoggle.responsive li:last-child  {
+.navtoggle.responsive li:last-child {
     border: 0;
     padding: 0 0 10px;
-  }
+}
 
-.navtoggle.responsive li:first-child  {
-    border-top: 0;    
+.navtoggle.responsive li:first-child {
+    border-top: 0;
 }
 
 .navtoggle.responsive .icon i::before {
-    content: "\f00d"; 
-  }
+    content: "\f00d";
+}
 
 /* footer */
 footer {
@@ -356,7 +361,7 @@ span {
 
 /* About */
 
-.about{
+.about {
     padding-block: 2rem;
     display: flex;
     flex-direction: column;
@@ -374,7 +379,7 @@ span {
     justify-content: center;
 }
 
-.project-site__description  {
+.project-site__description {
     max-width: 750px;
     margin-inline: auto;
 }
@@ -390,12 +395,29 @@ span {
 
 /* animation bulb */
 @keyframes color-change {
-    0% {fill: #FDD305;}
-    50% {fill: #fcffad;}
-    100% {fill: #f76414;}
-    0% {stroke: #FDD305;}
-    50% {stroke: #fcffad;}
-    100% {stroke: #f76414;}
+    0% {
+        fill: #FDD305;
+    }
+
+    50% {
+        fill: #fcffad;
+    }
+
+    100% {
+        fill: #f76414;
+    }
+
+    0% {
+        stroke: #FDD305;
+    }
+
+    50% {
+        stroke: #fcffad;
+    }
+
+    100% {
+        stroke: #f76414;
+    }
 }
 
 
@@ -410,13 +432,23 @@ span {
 /* rotation wheel */
 
 @keyframes rotate-clockwise {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(-360deg)}
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg)
+    }
 }
 
 @keyframes rotate {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg)}
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
 }
 
 .wheel-big {
@@ -441,21 +473,22 @@ span {
     h1 {
         font-size: 4.4rem;
     }
-    
+
     h2 {
         font-size: 3.6rem;
     }
-      
+
     h3 {
-        font-size: 2.8rem;    }
-    
+        font-size: 2.8rem;
+    }
+
     h4 {
         font-size: 2.1rem;
     }
 
     main {
         padding-top: 85.59px;
-      }    
+    }
 
     header .container {
         display: flex;
@@ -464,7 +497,7 @@ span {
     .navtoggle {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center; 
+        align-items: center;
         gap: 0.5em;
         padding-inline: 1.5rem;
         display: flex;
@@ -473,14 +506,14 @@ span {
 
     .navtoggle li:not(:last-child) {
         display: inline-block;
-     }
-    
-      .navtoggle li:last-child {
+    }
+
+    .navtoggle li:last-child {
         display: none;
     }
-    
+
     nav ul {
-        display: flex; 
+        display: flex;
         list-style: none;
         padding-inline-start: 0;
         gap: 2em;
@@ -488,9 +521,9 @@ span {
     }
 
     .logo {
-    height: clamp(2rem, 1.6rem + 1.111vw, 3.2rem);
-    margin: auto;
-    } 
+        height: clamp(2rem, 1.6rem + 1.111vw, 3.2rem);
+        margin: auto;
+    }
 
     .project-card {
         display: grid;
@@ -498,7 +531,7 @@ span {
         gap: 2.6rem;
         padding-block: 1.6rem;
     }
-   
+
     .project-card__media-wrapper {
         display: flex;
         align-items: center;
@@ -513,11 +546,11 @@ span {
     }
 
     .about-inner {
-    padding-bottom: 2rem;
+        padding-bottom: 2rem;
     }
 
     .skills-tools {
-        display: block;    
+        display: block;
     }
 
     .skills-tools__inner {
@@ -525,19 +558,19 @@ span {
         grid-template-columns: 1fr 1fr;
         gap: 8rem;
     }
-   
+
     .skills-tools__list-wrapper {
         display: block;
-        gap: 2rem; 
+        gap: 2rem;
     }
 
     nav ul {
-    display: flex;
+        display: flex;
     }
 
     nav ul li {
         display: inline-block;
-      }
+    }
 
 
 }
@@ -593,7 +626,7 @@ span {
         border-radius: 100vw;
         object-fit: cover;
         max-width: 300px;
-       /* object-position: 0 30%; */
+        /* object-position: 0 30%; */
 
     }
 
