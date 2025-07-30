@@ -381,7 +381,10 @@ span {
 
 .project-site__description {
     max-width: 750px;
-    margin-inline: auto;
+    padding-inline: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
 }
 
 .li .timeline-list {
