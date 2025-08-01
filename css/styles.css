@@ -47,7 +47,7 @@ a:hover {
     text-decoration: none;
 }
 
-a:focus {
+a:focus-visible {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
     border-radius: 2px;
@@ -144,7 +144,7 @@ a:active {
     border-radius: 100%;
 }
 
-.back-to-top:focus {
+.back-to-top:focus-visible {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
     border-radius: 100%;
@@ -210,6 +210,10 @@ h4 {
     color: var(--secondary);
 }
 
+p {
+    max-width: 750px;
+}
+
 /* header */
 header {
     background-color: var(--lightgreen);
@@ -248,7 +252,7 @@ nav a:hover {
     color: var(--secondary);
 }
 
-nav a:focus {
+nav a:focus-visible {
     color: var(--secondary);
 }
 
@@ -263,6 +267,8 @@ nav ul {
     gap: 0;
     margin: 0;
     text-align: center;
+    align-items: center;
+    width: 100%;
 }
 
 .navtoggle li:not(:last-child) {
@@ -278,17 +284,26 @@ header .navtoggle,
     display: flex;
     position: absolute;
     right: 0;
-    top: -15px;
-    font-size: 20px;
-    padding-right: 0;
+    top: -12px;
+    font-size: 24px;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    width: 24px;
+    justify-content: center;
+    border: none;
+}
+
+.navtoggle li .icon:visited {
+    color: var(--primary);
 }
 
 .navtoggle.responsive nav {
-    padding-block: 1.5rem;
+    padding-block: 1.5rem 0;
+    align-items: center;
 }
 
 .navtoggle.responsive nav ul {
-    border-top: 1px solid var(--lightgrey);
+    border-top: 1px solid var(--black);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -297,12 +312,13 @@ header .navtoggle,
 
 .navtoggle.responsive li {
     display: block;
-    border-top: 1px solid var(--lightgrey);
+    border-top: 1px solid var(--black);
 }
 
 .navtoggle.responsive li:last-child {
     border: 0;
-    padding: 0 0 10px;
+    padding: 0;
+    height: 0;
 }
 
 .navtoggle.responsive li:first-child {
@@ -311,6 +327,13 @@ header .navtoggle,
 
 .navtoggle.responsive .icon i::before {
     content: "\f00d";
+    font-size: 24px;
+    width: 24px;
+}
+
+li.nav {
+    width: 100%;
+    border: none;
 }
 
 /* footer */
@@ -329,6 +352,9 @@ footer .container {
     gap: 0.5em;
 }
 
+footer p {
+    text-align: center;
+}
 .social-media {
     color: var(--primary);
 }
@@ -348,7 +374,6 @@ footer .container {
 
 /* Home template */
 .textblock {
-    max-width: 750px;
     margin-inline: auto;
 }
 
@@ -380,8 +405,6 @@ span {
 }
 
 .project-site__description {
-    max-width: 750px;
-    padding-inline: 1.5rem;
     display: flex;
     flex-direction: column;
     margin: auto;
