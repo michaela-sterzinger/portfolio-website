@@ -1,6 +1,9 @@
 console.log("Hello world")
 
 function menuToggle() {
+    const btn = document.querySelector('.icon');
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !isExpanded);
     var x = document.getElementById('mynavtoggle');
     if (x.className === 'navtoggle') {
         x.className += ' responsive';
