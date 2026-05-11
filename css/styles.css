@@ -666,7 +666,7 @@ span {
         border-radius: 100vw;
         object-fit: cover;
         max-width: 300px;
-        /* object-position: 0 50%; */
+        object-position: 0 20%; 
 
     }
 
