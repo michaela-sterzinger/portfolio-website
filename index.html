@@ -26,7 +26,7 @@
                         <li class="nav"><a href="index.html">Work</a></li>
                         <li class="nav"><a href="about.html">About</a></li>
                         <li class="nav"><a href="#contact">Contact</a></li>
-                        <li class="nav"><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fa-solid fa-bars"></i></a></li>
+                        <li class="nav"><a href="javascript:void(0);" class="icon" onclick="menuToggle()" aria-label="menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></a></li>
                         </ul>
                     </nav>
             </div>
@@ -36,7 +36,7 @@
         <section class="hero">
             <div class="container abo"> 
                 <h1>Hi, I'm Michaela Sterzinger. <span>UX/UI Designer from Munich</span></h1>
-                <p class="textblock">As a UX/UI Designer, I’m passionate about crafting seamless, user-first experiences that prioritize accessibility and inclusivity.</p> 
+                <p class="textblock">As a UX/UI Designer with roots in Technical Communication, I craft accessible, inclusive experiences that bridge the gap between complex systems and real users.</p> 
             </div>
         </section>
         <section>
@@ -85,14 +85,14 @@
                 <div class="project-card">
                     <div class="project-card__media-wrapper">
                         <picture>
-                            <source srcset="img/zebra/ZEBRA_design specs@1x.jpg" media="(max-width:767px)">
+                            <source srcset="img/servicedesign/servicedesign_design@1x.jpg" media="(max-width:767px)">
                             <img src="img/servicedesign/servicedesign_design@2x.jpg" alt="Figma Snapshot of the Service Design Blueprint">
                         </picture>
                     </div>
                     <div class="project-card__content-wrapper">
                         <h3>Service Design Workshop:<span>Bridging Two Products</span></h3>
                         <p>In my most recent project as Lead UX Designer for the customer portal, I collaborated with the designers on the website project to conduct a service design workshop and developed a shared, cross-project service vision.</p>
-                        <a href="servicedesign.html" class="button primary">More about Service Design Workshop</a>
+                        <!-- <a href="servicedesign.html" class="button primary">More about Service Design Workshop</a> -->
                     </div>  
                 </div>
             </div>
@@ -124,6 +124,7 @@
     integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>  
     <script src="js/scripts.js"></script>
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <a href="#" class="back-to-top" aria-label="Back to top">
+  <i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 </body>
 </html>
