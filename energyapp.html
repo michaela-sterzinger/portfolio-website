@@ -35,7 +35,7 @@
     <main> 
         <section>
             <div class="container">
-                <h1>Project Energy App</h1>
+                <h1>Energy self-service App</h1>
                 <div class="project-site__media-hero">
                     <picture>
                         <source srcset="img/energyapp/EnergyApp@1x.png" media="(max-width:767px)">
@@ -43,7 +43,7 @@
                     </picture>
                 </div>
                 <div class="project-site__description">
-                    <p>The Energy App is a modern, accessible mobile solution for managing household energy and water services. It lets users visualize consumption data, record meter readings (manually or via scan), manage tariffs, and view bills—all within an intuitive interface designed to meet both user needs and business goals.</p>
+                    <p>A self-service app built for thousands of utility customers. Seven months, five real users, ten hypotheses tested. The business wanted the inbox in the bottom navigation – research said otherwise. Here's how the data changed the architecture.</p>
                 </div>
             </div>
         </section>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="project-site__description">
                     <p>
-                        In designing the Energy App, I followed a four-phase process: Research (stakeholder workshops, interviews, usability tests and a WCAG AA audit) to surface pain points and accessibility needs; Ideation (user flows and low-fidelity Figma wireframes) refined with stakeholder feedback; UX/UI Design & Prototyping (high-fidelity, brand-aligned screens, interactive prototypes and documented components); and Testing & Refinement (usability sessions, data-visualization tweaks and micro-interaction polish). Throughout, close collaboration with developers in Jira and Confluence ensured feasibility and a smooth handoff.</p>
+                        The Energy App gives thousands of SWM customers control over their energy and water usage. During usability testing, one finding stood out: the business wanted the inbox in the bottom navigation – but research showed it belonged under "More", and consumption visualisation deserved its own tab. That single decision shaped the final information architecture.</p>
                 </div>
                 <div class="project-site__timeline">
                     <h3>Timeline</h3>
@@ -90,27 +90,46 @@
                         </ol>
                     </div>
                 </div>
-                 <div class="project-site__description">
-                    <h3>Project Highlights</h3>
+                <!-- <div class="project-site__outcomes">
+                    <h3>Research Outcomes</h3>
                     <div>
                          <ul class="list">
-                            <li><b>Interactive Consumption Charts</b> <br>Clear, real-time visualizations of energy and water usage</li>
-                            <li><b>Meter-Reading Workflow</b> <br>Manual entry and scan-based capture, plus a history log</li>
-                            <li><b>Tariff & Billing Management</b> <br>Easy tariff adjustments and bill overview</li>
-                            <li><b>Accessibility (WCAG AA)</b> <br>Scalable typography, high-contrast colors, and inclusive design</li>
-                            <li><b>Cross-Functional Collaboration</b> <br>Ongoing coordination with stakeholders and developers</li>
+                            <li>10 out of 10 hypotheses validated or partially validated across 3 test scenarios: <br>7 fully confirmed, 3 partially confirmed.</li>
+                            <li>4 out of 5 hypotheses confirmed for the consumption visualisation: <br>                             users understood and correctly navigated the core feature.</li>
+                            <li>3 out of 3 hypotheses confirmed for the meter-reading flow: <br>theredesigned submission process was rated simpler and more intuitive.</li>
+                            <li>Consumption visualisation ranked 3rd out of 10 features <br>for both importance and frequency of use.</li>
+                            <li>100% of participants successfully navigated the segmented button switcher <br>for tariff/utility types without assistance.</li>
+                            <li>Icons were correctly interpreted in context by the majority of participants: <br>leading to the design decision to add descriptive labels for edge cases.</li>
+                            <li>Invoices were not found intuitively within the inbox: <br>a key finding that informed the navigation structure of the final design.</li>
                         </ul>
                     </div>
-                         <div> 
-                             <iframe title="Figma Embed" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/deck/7cFt8Jr1ZsEnBvLRla22Rr/Energy-App-Usability-Testing?node-id=4001-1545&viewport=-109%2C-2643%2C0.52&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
-                        </div>
+                </div> -->
+                <div class="project-site__description">
+                    <h3>Project Highlights</h3>
+                    <div>
+                        <ul>
+                         <li><strong>Architecture Decision</strong><br>Inbox sufficient under "More" – consumption visualisation promoted to its own primary tab.</li>
+                         <li><strong>Tooltip Pattern</strong><br>Explanatory text felt overwhelming in testing – restructured and hidden behind info tooltips.</li>
+                         <li><strong>Task Completion</strong><br>4/5 users completed the meter-reading workflow without assistance.</li>
+                         <li><strong>Consumption Visualisation</strong><br>Ranked 3rd of 10 features for both importance and usage frequency.</li>
+                         <li><strong>Accessibility (WCAG AA)</strong><br>Scalable typography, high-contrast colours, inclusive interaction patterns.</li>
+                        </ul>
                     </div>
+                    <div class="figma-embed-wrapper">
+                        <iframe
+                            class="figma-embed"
+                            src="https://embed.figma.com/deck/7cFt8Jr1ZsEnBvLRla22Rr/Energy-App-Usability-Testing?node-id=4001-1545&viewport=-109%2C-2643%2C0.52&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share"
+                            allowfullscreen
+                            title="Energy App – Usability Testing Figma Deck">
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
             <div class="container project-site__description">
                 <h2>Conclusion</h2>
-                <p>The Energy App delivers a user-centric, accessible platform for energy and water management. Key features—interactive consumption charts, meter-reading history, and tariff controls—offer tangible user value. This project strengthened my UX/UI design skills, honed my user-testing expertise, and underscored the importance of close collaboration across disciplines.</p>
+                <p>The Energy App delivers a user-centric, accessible platform for energy and water management. Key features—interactive consumption charts, meter-reading history, and tariff controls—offer tangible user value. The most important lesson from this project: data beats assumptions. When research contradicted the brief on navigation structure, the numbers made the argument. The final architecture reflects what users actually needed – not what was initially planned.</p>
             </div>
         </section>
     </main>
@@ -120,7 +139,14 @@
             <p>
                 Do you like my work and want to discuss opportunities? Please get in touch.</p>
             <div class="e-mail">
-              <a href="mailto:michaela.sterzinger@gmx.de">Email me</a>
+              <a href="mailto:michaela.sterzinger@gmx.de">Email me <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true" style="margin-left: 0.6rem; vertical-align: middle;">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                        <polyline points="15 3 21 3 21 9"/>
+                        <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg></a>
             </div>
             <div class="social-media">
                 <ul>
