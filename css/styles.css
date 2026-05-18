@@ -230,6 +230,7 @@ header {
     width: 100%;
     height: auto;
     box-shadow: 0 -6px 8px 5px var(--black);
+    z-index: 100;
 }
 
 header a:has(.logo) {
@@ -408,10 +409,10 @@ span {
     color: inherit;
 }
 
-.project-card:hover {
+/*.project-card:hover {
     transform: translateY(-0.4rem);
     box-shadow: 0 0.8rem 2.4rem 0 hsla(172, 30%, 16%, 0.14);
-}
+}*/
 
 .project-card__media-wrapper {
     display: flex;
@@ -429,9 +430,9 @@ span {
 }
 
 
-.project-card:hover .project-card__media-wrapper img {
+/*.project-card:hover .project-card__media-wrapper img {
     transform: scale(1.03);
-}
+}*/
 
 .project-card__content-wrapper {
     padding: 1.5rem;
