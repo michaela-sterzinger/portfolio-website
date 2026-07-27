@@ -63,6 +63,7 @@ a:active {
     border-radius: 4px;
     text-decoration: none;
     display: flex;
+    align-items: center;
     justify-content: center;
     transition: 0.8s background-color;
 }
