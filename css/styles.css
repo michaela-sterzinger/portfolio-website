@@ -1,9 +1,10 @@
 /* colors */
 :root {
     --primary: hsl(172, 30%, 34%);
-    --secondary: hsl(172, 30%, 16%);
-    --lightgreen: hsl(172, 30%, 60%);
+    --secondary: hsl(173, 30%, 16%);
+    --lightgreen: hsl(169, 22%, 70%);
     --lightgrey: hsl(172, 0%, 95%);
+    --grey: hsl(172, 0%, 75%);
     --tertiary: hsl(343, 11%, 49%);
     --tertiarylight: hsl(343, 11%, 60%);
     --black: hsl(0, 0%, 13%);
@@ -23,7 +24,7 @@ html {
 body {
     background-color: #ffffff;
     font-size: 1.6rem;
-    font-family: 'Karla', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     color: var(--black);
     line-height: 1.6;
@@ -412,12 +413,25 @@ span {
 
 .project-card {
     background-color: #ffffff;
-    border-radius: 0.8rem;
-    border: 1px solid var(--lightgrey);
-    box-shadow: 0 0.2rem 0.8rem 0 hsla(172, 30%, 16%, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
     color: inherit;
+    position: relative;
+    padding-block: 3rem;
+}
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    width: 25%;
+    height: 2px;
+    margin-inline: auto;
+    background-color: var(--grey);
+}
+
+.project-card:last-child::after {
+    content: none;
 }
 
 /*.project-card:hover {
@@ -428,6 +442,7 @@ span {
 .project-card__media-wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .project-card__media-wrapper img {
@@ -644,7 +659,7 @@ span {
         display: grid;
         grid-template-columns: 2fr 3fr;
         gap: 2.6rem;
-        padding-block: 1.6rem;
+        padding-block: 3rem;
     }   
 
     .project-card__content-wrapper .button {
@@ -740,12 +755,11 @@ span {
         display: grid;
         grid-template-columns: 3fr 2fr;
         align-items: center;
-        padding-block: 2.4rem;
+        padding-block: 10rem;
     }
 
     .project-card__media-wrapper {
         display: flex;
-        justify-content: center;
     }
 
     .project-card__media-wrapper img {
